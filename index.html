@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="background-animation"></div>
+
+    <!-- ========================= -->
+    <!-- LOGIN PAGE -->
+    <!-- ========================= -->
+
+    <section id="login-page" class="card">
+
+        <h1 class="main-title">
+            Quiz Challenge
+        </h1>
+
+        <p class="tagline">
+            “Challenge Your Brain. Unlock Your Future.”
+        </p>
+
+        <div class="form-container">
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter Student Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="studentUSN"
+                placeholder="Enter Student USN"
+                required
+            >
+
+            <input
+                type="text"
+                id="studentRoll"
+                placeholder="Enter Roll Number"
+                required
+            >
+
+            <input
+                type="email"
+                id="studentEmail"
+                placeholder="Enter Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                id="studentPhone"
+                placeholder="Enter Phone Number"
+                required
+            >
+
+            <button
+                class="primary-btn"
+                onclick="saveStudentDetails()"
+            >
+                Continue To Quiz
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- SUBJECT PAGE -->
+    <!-- ========================= -->
+
+    <section id="subject-page"
+        class="card hidden">
+
+        <h1>
+            Select Your Subject
+        </h1>
+
+        <p class="tagline">
+            “Success Begins With Smart Practice.”
+        </p>
+
+        <div class="subject-grid">
+
+            <div
+                class="subject-card"
+                onclick="openLevels('Python')"
+            >
+
+                <h2>🐍 Python</h2>
+
+                <p>
+                    Master the world's most powerful language.
+                </p>
+
+            </div>
+
+            <div
+                class="subject-card"
+                onclick="openLevels('Physics')"
+            >
+
+                <h2>⚛️ Physics</h2>
+
+                <p>
+                    Discover laws behind the universe.
+                </p>
+
+            </div>
+
+            <div
+                class="subject-card"
+                onclick="openLevels('Chemistry')"
+            >
+
+                <h2>🧪 Chemistry</h2>
+
+                <p>
+                    Explore atoms, reactions and science.
+                </p>
+
+            </div>
+
+            <div
+                class="subject-card"
+                onclick="openLevels('AI')"
+            >
+
+                <h2>🤖 AI</h2>
+
+                <p>
+                    Learn intelligence of future machines.
+                </p>
+
+            </div>
+
+            <div
+                class="subject-card"
+                onclick="openLevels('Mathematics')"
+            >
+
+                <h2>📘 Mathematics</h2>
+
+                <p>
+                    Train your analytical brain.
+                </p>
+
+            </div>
+
+            <div
+                class="subject-card"
+                onclick="openLevels('C Programming')"
+            >
+
+                <h2>💻 C Programming</h2>
+
+                <p>
+                    Build strong programming foundations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- LEVEL PAGE -->
+    <!-- ========================= -->
+
+    <section id="level-page"
+        class="card hidden">
+
+        <h1 id="selectedSubject">
+            Subject
+        </h1>
+
+        <p class="tagline">
+            “Choose Your Challenge Level.”
+        </p>
+
+        <div class="level-grid">
+
+            <div
+                class="level-card easy"
+                onclick="startQuiz('easy')"
+            >
+
+                <h2>Easy</h2>
+
+                <p>10 Questions</p>
+
+            </div>
+
+            <div
+                class="level-card medium"
+                onclick="startQuiz('medium')"
+            >
+
+                <h2>Medium</h2>
+
+                <p>10 Questions</p>
+
+            </div>
+
+            <div
+                class="level-card hard"
+                onclick="startQuiz('hard')"
+            >
+
+                <h2>Hard</h2>
+
+                <p>10 Questions</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- QUIZ PAGE -->
+    <!-- ========================= -->
+
+    <section id="quiz-page"
+        class="card hidden">
+
+        <div class="quiz-header">
+
+            <h2 id="quizSubject"></h2>
+
+            <div id="timer">
+                Time: 15
+            </div>
+
+        </div>
+
+        <!-- PROGRESS BAR -->
+
+        <div class="progress-bar">
+
+            <div id="progress-fill"></div>
+
+        </div>
+
+        <!-- QUESTION -->
+
+        <h2 id="questionText">
+
+            Question Here
+
+        </h2>
+
+        <!-- OPTIONS -->
+
+        <div id="optionsContainer"></div>
+
+        <!-- NEXT BUTTON -->
+
+        <button
+            id="nextBtn"
+            class="primary-btn hidden"
+            onclick="nextQuestion()"
+        >
+
+            Next Question
+
+        </button>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- RESULT PAGE -->
+    <!-- ========================= -->
+
+    <section id="result-page"
+        class="card hidden">
+
+        <h1>
+            Student Progress Card
+        </h1>
+
+        <!-- CIRCLE RESULT -->
+
+        <div class="result-circle">
+
+            <svg width="220"
+                height="220">
+
+                <circle
+                    cx="110"
+                    cy="110"
+                    r="90"
+                    class="bg"
+                ></circle>
+
+                <circle
+                    cx="110"
+                    cy="110"
+                    r="90"
+                    id="progressCircle"
+                ></circle>
+
+            </svg>
+
+            <div class="score-text">
+
+                <h2 id="percentage">
+                    0%
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- STUDENT DETAILS -->
+
+        <div class="student-details">
+
+            <p>
+                <strong>Name:</strong>
+                <span id="resultName"></span>
+            </p>
+
+            <p>
+                <strong>USN:</strong>
+                <span id="resultUSN"></span>
+            </p>
+
+            <p>
+                <strong>Roll Number:</strong>
+                <span id="resultRoll"></span>
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <span id="resultEmail"></span>
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                <span id="resultPhone"></span>
+            </p>
+
+            <p>
+                <strong>Subject:</strong>
+                <span id="resultSubject"></span>
+            </p>
+
+            <p>
+                <strong>Level:</strong>
+                <span id="resultLevel"></span>
+            </p>
+
+            <p>
+                <strong>Score:</strong>
+                <span id="resultScore"></span>
+            </p>
+
+            <p>
+                <strong>Grade:</strong>
+                <span id="resultGrade"></span>
+            </p>
+
+        </div>
+
+        <!-- MESSAGE -->
+
+        <h2 id="message">
+
+            Keep Learning & Growing 🚀
+
+        </h2>
+
+        <!-- BUTTON -->
+
+        <button
+            class="primary-btn"
+            onclick="goHome()"
+        >
+
+            Back To Subjects
+
+        </button>
+
+    </section>
+
+    <!-- JS FILES -->
+
+    <script src="data.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
