@@ -216,7 +216,7 @@ The application is fully responsive across:
 
 <div align="center">
 
-## 💻 Madhumathi Itagi
+## 💻 Tejashwini S Patil
 
 ### Student Developer • RYMEC Ballari
 
