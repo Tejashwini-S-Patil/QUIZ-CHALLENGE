@@ -1,14 +1,13 @@
 <div align="center">
 
-# 🎓 RYMEC QUIZ CHALLENGE PORTAL
+# 🎓 QUIZ CHALLENGE PORTAL
 
-### 🚀 Smart Interactive Quiz Platform For Engineering Students
+### 🚀 Smart Interactive Quiz Platform
 
 <img src="https://img.shields.io/badge/HTML5-Frontend-orange?style=for-the-badge&logo=html5">
 <img src="https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge&logo=css3">
 <img src="https://img.shields.io/badge/JavaScript-Logic-yellow?style=for-the-badge&logo=javascript">
 <img src="https://img.shields.io/badge/Responsive-Design-success?style=for-the-badge">
-<img src="https://img.shields.io/badge/RYMEC-Project-purple?style=for-the-badge">
 
 <br>
 <br>
@@ -19,8 +18,7 @@
 
 <br>
 
-✨ Developed For  
-## Rao Bahadur Y. Mahabaleswarappa Engineering College (RYMEC)
+✨ Interactive Learning Through Smart Quizzes
 
 ---
 
@@ -28,7 +26,7 @@
 
 # 📌 About The Project
 
-RYMEC Quiz Challenge Portal is a modern and interactive web application designed for engineering students to test and improve their technical knowledge through engaging quizzes.
+Quiz Challenge Portal is a modern and interactive web application designed to help users test and improve their knowledge through engaging quizzes.
 
 The platform provides:
 
@@ -52,12 +50,11 @@ The platform provides:
 
 ---
 
-## 🔐 Student Validation System
+## 🔐 User Validation System
 - Name Validation
-- USN Validation
 - Email Validation
 - Phone Number Validation
-- Roll Number Verification
+- User Verification
 
 ---
 
@@ -96,9 +93,9 @@ Each subject contains:
 ✅ Auto Score Calculation  
 ✅ Circular Result Indicator  
 ✅ Grade System  
-✅ Student Progress Card  
+✅ Performance Dashboard  
 ✅ Difficulty Level Selection  
-✅ Responsive Mobile Design  
+✅ Responsive Mobile Design
 
 ---
 
@@ -107,25 +104,25 @@ Each subject contains:
 ```mermaid
 graph TD
 
-A[Student Login] --> B[Validation]
+A[User Login] --> B[Validation]
 B --> C[Select Subject]
 C --> D[Choose Difficulty]
 D --> E[Start Quiz]
 E --> F[Timer & Questions]
 F --> G[Score Calculation]
 G --> H[Result Dashboard]
-````
+```
 
 ---
 
 # 🛠️ Technologies Used
 
-| Technology        | Purpose              |
-| ----------------- | -------------------- |
-| HTML5             | Structure            |
-| CSS3              | Styling              |
-| JavaScript        | Functionality        |
-| Glassmorphism UI  | Modern Design        |
+| Technology | Purpose |
+|------------|----------|
+| HTML5 | Structure |
+| CSS3 | Styling |
+| JavaScript | Functionality |
+| Glassmorphism UI | Modern Design |
 | Responsive Design | Mobile Compatibility |
 
 ---
@@ -133,14 +130,12 @@ G --> H[Result Dashboard]
 # 📂 Project Structure
 
 ```bash
-RYMEC-Quiz-Challenge/
+Quiz-Challenge-Portal/
 │
 ├── index.html
 ├── style.css
 ├── script.js
 ├── data.js
-├── rymec-logo.webp
-├── rymec college pic.webp
 ├── README.md
 └── .gitignore
 ```
@@ -152,7 +147,7 @@ RYMEC-Quiz-Challenge/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RYMEC-Quiz-Challenge.git
+git clone https://github.com/YOUR_USERNAME/Quiz-Challenge-Portal.git
 ```
 
 ---
@@ -160,7 +155,7 @@ git clone https://github.com/YOUR_USERNAME/RYMEC-Quiz-Challenge.git
 ## 2️⃣ Open Project
 
 ```bash
-cd RYMEC-Quiz-Challenge
+cd Quiz-Challenge-Portal
 ```
 
 ---
@@ -179,13 +174,11 @@ OR run using VS Code Live Server.
 
 # 🌐 Deployment
 
-This project is deployed using:
-
 ## 🚀 Netlify
 
 🔗 Live Link:
 
-# https://quizchallengewebsite.netlify.app/
+https://quizchallengewebsite.netlify.app/
 
 ---
 
@@ -205,7 +198,7 @@ The application is fully responsive across:
 * 🔥 Firebase Integration
 * 📈 Leaderboard System
 * 📜 Certificate Generation
-* 👨‍🏫 Admin Dashboard
+* 👨‍💻 Admin Dashboard
 * 🌙 Dark / Light Mode
 * 📊 Quiz Analytics
 * 🧠 AI Generated Questions
@@ -214,33 +207,11 @@ The application is fully responsive across:
 
 # 👨‍💻 Developed By
 
-<div align="center">
+## 💻 Tejashwini.S.Patil
 
-## 💻 Tejashwini S Patil
-
-### Student Developer • RYMEC Ballari
-
-<br>
-
-✨ Passionate About
+✨ Passionate About  
 Web Development • UI/UX • Programming • Innovation
 
-</div>
-
 ---
-
-# ❤️ Acknowledgement
-
-Special thanks to
-
-## 🎓 Rao Bahadur Y. Mahabaleswarappa Engineering College (RYMEC)
-
-for inspiring innovation, creativity, and technical excellence 🚀
-
----
-
-<div align="center">
 
 # ⭐ If You Like This Project, Give It A Star ⭐
-
-</div>
